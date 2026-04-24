@@ -2,3 +2,15 @@ import streamlit as st
 
 st.title("Hello")
 st.write("isom3400")
+
+st.write("**Bold Text** and *Italic Text*")
+
+age = st.number_input("Enter your age:",
+                      min_value=0,
+                      max_value=120,
+                      value=25)
+st.write(f"Your age is {age}")
+
+option = st.selectbox("Choose your favorite color:",
+                      ["Red", "Blue", "Green"])
+st.write(f"You selected: {option}")
