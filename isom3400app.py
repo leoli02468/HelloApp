@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("Hello")
-st.write("isom3400")
+st.header("isom3400")
 
 st.write("**Bold Text** and *Italic Text*")
 
