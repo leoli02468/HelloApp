@@ -42,4 +42,4 @@ else:  # Trig functions
 
 # Display result if one was calculated
 if result is not None:
-    st.success(f""The {operation_sci} result is: {result}"")"
+    st.success(f""The {operation_sci} result is: {result}"")
