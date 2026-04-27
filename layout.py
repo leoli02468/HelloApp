@@ -65,7 +65,7 @@ with st.expander("More Information"):
     st.write("Additional details on data collection methods.")
     st.write("Data was collected through surveys and sales reports.")
 
-# Dynamic Containers
+# Dynamic Containers (placeholder)
 placeholder = st.empty()
 
 # Simulate loading data and updating the placeholder
