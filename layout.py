@@ -60,9 +60,6 @@ with tab3:
         st.write(f"{trend}: {status}")
 with tab4:
     st.write("- To be confirmed")
-
-
-
     
 with st.expander("More Information"):
     st.write("Additional details on data collection methods.")
