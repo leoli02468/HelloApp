@@ -8,11 +8,6 @@ with st.sidebar:
     selected=option_menu(
         menu_title = "Menu",
         options = ["Home", "About", "Contact"],
-        icons = ["1-circle-fill",
-                 "2-circle-fill",
-                 "3-circle-fill"],
-        menu_icon= "emoji-smile-fill",
-        default_index=0,
     )
 
 if selected == "Home":
