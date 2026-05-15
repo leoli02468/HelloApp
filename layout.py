@@ -85,3 +85,21 @@ business_insights = [
 for insight in business_insights:
     placeholder.write(insight)
     time.sleep(2)
+
+st.subheader("Interactive Revenue Checker")
+quarters = list(sales_data.keys())
+selected_quarter = st.selectbox("Select a quarter:", quarters)
+
+st.write(f"Revenue for {selected_quarter}: ${sales_data[selected_quarter]}M")
+
+growth = st.slider("Adjust growth percentage:", 0, 50, 10)
+base_revenue = sales_data[selected_quarter]
+adjusted_revenue = base_revenue * (1 + growth / 100)
+
+st.write(f"Adjusted Revenue for {selected_quarter}: ${adjusted_revenue:.2f}M")
+
+# -------------------------------
+# 7. Motivational Button
+# -------------------------------
+if st.button("Show Motivation"):
+    st.success("Keep pushing for growth! 🚀")
