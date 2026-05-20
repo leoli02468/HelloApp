@@ -1,27 +1,43 @@
+# Step 2: Import Necessary Libraries
 import streamlit as st
-import time
+import numpy as np
+import pandas as pd
 
-# Title
-st.title("Business Dashboard with Streamlit Layouts")
+# Step 3: Generate Random Sales Data
+sales_data = np.random.rand(100) * 1000
 
-# Objective
-st.write("Objective: To demonstrate the usage of columns, tabs, and dynamic containers in a business dashboard.")
+# Step 4: Create a DataFrame
+products = ['Product A', 'Product B', 'Product C', 'Product D', 'Product E']
+sales = np.random.rand(5) * 1000
+customers = np.random.randint(1, 100, size=5)
 
-# Columns Layout
-col1, col2, col3, col4 = st.columns(4)
-with col1:
-    st.header("Q1 2024")
-    st.write("Revenue: $1.2M")
-with col2:
-    st.header("Q2 2024")
-    st.write("Revenue: $1.5M")
-with col3:
-    st.header("Q3 2024")
-    st.write("Revenue: $1.3M")
-with col4:
-    st.header("Q4 2024")
-    st.write("Revenue: $1.6M")
+df = pd.DataFrame({
+    'Product': products,
+    'Sales': sales,
+    'Customers': customers
+})
 
+# Step 5: Visualize Sales Data
+
+# Display DataFrame using st.dataframe
+st.markdown("### Product Sales and Customer Data")
+st.dataframe(df)  # Interactive table with sorting and resizing
+
+# Line Chart - Sales Over Time
+st.markdown("### Sales Over Time")
+st.line_chart(sales_data)
+
+# Area Chart - Cumulative Sales
+st.markdown("### Cumulative Sales")
+st.area_chart(sales_data)
+
+# Bar Chart - Sales by Product
+st.markdown("### Sales by Product")
+st.bar_chart(df[['Product', 'Sales']].set_index('Product'))
+
+# Scatter Chart - Customer Engagement by Product
+st.markdown("### Customer Engagement by Product")
+st.scatter_chart(df[['Product', 'Customers']].set_index('Product'))
 
 
 # Tabs Layout
